@@ -1,0 +1,14 @@
+
+.navbar{
+    background-color:rgb(167, 167, 253) ;
+}
+.navbar-brand, .nav-link{
+    color: white;
+}
+form{
+    margin-top: 4rem;
+}
+#sign{
+    text-align: center;
+    padding-top: 2rem;
+}

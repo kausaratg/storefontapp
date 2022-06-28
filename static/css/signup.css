@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(49, 47, 47);
+    color: white;
+}
+#sign{
+    text-align: center;
+}
+form{
+    padding-top: 2rem;
+}
+hr{
+    background-color: white;
+}

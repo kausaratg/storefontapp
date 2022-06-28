@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(207, 207, 233);
+    overflow-x: hidden;
+
+}
+.navbar{
+    background-color:rgb(167, 167, 253) ;
+}
+.navbar-brand, .nav-link{
+    color: white;
+}
+.top p, .top h2{
+    text-align: center;
+    padding-left: 20%;
+    padding-right: 10%;
+
+}
+.top img{
+    width: 70%;
+    margin-top: 4rem;
+    margin-left: 20%;
+}
+#about{
+    text-align: center;
+}
+.row img{
+    width: 20rem;
+    height: 25rem;
+    border-radius: 15px;
+}
+.text{
+    border-left: 5px solid green;
+    padding: 10% 3%;
+}
+footer{
+    text-align: center;
+    margin: 1rem;
+}

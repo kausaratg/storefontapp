@@ -1,0 +1,72 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    <title>Login</title>
+    <style>
+      #me{
+        color: red;
+      }
+    </style>
+  </head>
+  <body>     
+   <div class="container">
+    <h1 id="sign">Sign up</h1>
+    <hr>
+    {%for message in messages%}
+      <h4 id='me'>{{message}}</h4>
+    {%endfor%}
+    <form action='' method='POST'>
+      {% csrf_token %}
+        <div class="row">
+          <div class="col">
+            <input name='f_name' type="text" class="form-control" placeholder="First name" Required>
+          </div>
+          <div class="col">
+            <input type="text" name='l_name' class="form-control" placeholder="Last name" Required>
+          </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Email</label>
+              <input type="email" name='email' class="form-control" id="inputEmail4" placeholder="Email" Required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputEmail4">Username</label>
+              <input type="text" name='username' class="form-control"  placeholder="username" Required>
+            </div>
+            <div class="form-group col-md-6">
+              <label for="inputPassword4">Password</label>
+              <input name='password1' type="password" class="form-control" id="inputPassword4" placeholder="Password" Required>
+            </div>
+          </div>
+          <div class="form-group col-md-8">
+            <label for="inputPassword4">Password again</label>
+            <input name='password2' type="password" class="form-control" id="inputPassword4" placeholder="Password" Required>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                Remember Me
+              </label>
+            </div>
+            <p>Have an account? <a href="{% url 'signin' %}">Sign in</a></p>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign up</button>
+      </form>
+   </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script> 
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+  </body>
+</html>

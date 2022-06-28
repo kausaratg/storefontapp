@@ -1,0 +1,76 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" >
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+    <title>About</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light container-fluid">
+            <a class="navbar-brand" href="#"><h1>StoreFont</h1></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href=" {% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'signin' %}">SignIn</a>
+                    </li>
+                </ul>
+            </div>
+        </nav> 
+        <div class='top'>
+            <img src="{% static 'images/store.png' %}" alt="storefont">
+            <h2>Find the perfect items for our online store</h2>
+            <p>You can explore our online store to find the perfect item needed. When it comes to usability, 
+                the shop and functional - customers can filter products by category and sort by popularity.  </p>
+        </div>
+        <hr>
+        <div class="container">
+        <h3 id="about">About me</h3>
+        <div class="row">
+
+            <div class="col-md-4 col-sm-12">
+                <img class="image" src="{% static 'images/me.jpg' %}">
+                <h3>Giwa kausarat Mojoyinola</h3>
+            </div>
+            <div class="col-md-8 col-sm-12 text ">
+                <h2>Hello 👋</h2>
+                <p>I am kausarat... You can call me kassy, I am currently a computer Science Student 
+                    university of Ibadan Nigeria. I am aspiring Software Developer and I am currently learning graphics design and web development in 
+                    Rukatech Computer college Ijebu-Ode Ogun State. I would love to connect with you. You can connect with me
+                     on my <a href="https://twitter.com/kausarat_g?t=E4HN7wAYGhKUtUDcVrNqoA&s=09">Twitter page</a>. You can also message me on
+                     <button class="btn btn-dark"><a href="{% url 'contact' %}">Contact me</a></button>
+
+              </p>
+            </div>
+        </div>
+        </div>
+        <footer class="footer">
+            <h3>Proudly made by kassy ❤️</h3>
+        </footer>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'vendor/jquery/jquery.min.js'%}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+  </body>
+</html>
