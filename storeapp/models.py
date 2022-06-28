@@ -11,17 +11,13 @@ class Post(models.Model):
     def __str__(self):
         return self.name
 
-class User(models.Model):
-    User = models.ForeignKey(User, on_delete= models.CASCADE)
+class Register(models.Model):
+    profile = models.ForeignKey(User, on_delete= models.CASCADE)
     f_name = models.CharField(max_length=20)
     l_name = models.CharField(max_length=20)
-    username = models.CharField(max_length=20)
-    email = models.EmailField()
-    password = models.TextField()
 
     def __str__(self):
         return self.f_name
-
 class Message(models.Model):
     email = models.EmailField()
     message = models.TextField()
