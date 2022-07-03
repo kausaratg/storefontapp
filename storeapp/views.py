@@ -3,7 +3,7 @@
 from django.shortcuts import redirect, render
 from django.http import HttpResponse
 from django.contrib import messages
-from .models import User, Message, Register
+from .models import User, Message, Register, Post
 from django.contrib.auth.models import auth
 from django.contrib.auth.decorators import login_required
 
@@ -11,7 +11,9 @@ from django.contrib.auth.decorators import login_required
 # Create your views here.
 @login_required
 def index(request):
-    return render(request, 'index.html')
+    post = Post.objects.all()
+    context = {'post':post}
+    return render(request, 'index.html', context)
 
 @login_required
 def about(request):

@@ -1,3 +1,4 @@
+from distutils.command.upload import upload
 from tkinter import CASCADE
 from django.db import models
 from django.contrib.auth import get_user_model
@@ -5,7 +6,7 @@ from django.contrib.auth import get_user_model
 # Create your models here.
 User = get_user_model()
 class Post(models.Model):
-    img = models.ImageField()
+    img = models.ImageField(upload_to='posts')
     name = models.CharField(max_length=50)
 
     def __str__(self):
