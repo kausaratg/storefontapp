@@ -15,7 +15,7 @@ About Page - Allow user to know about the Website and the Developer
 ## To install and run the project
 1. Create a django environment 
 2. clone the project             ```https://github.com/kausaratg/storefontapp.git``` 
-3.  Enter into the directory         ```cd storefontapp``
+3.  Enter into the directory         ```cd storefontapp```
 4.  Pull any recent change from main branch     ```git pull origin main```
 5.  create a virtual env   ```python -m venv env```
 6. Activate the virtual env   ```env/Scripts/activate```
